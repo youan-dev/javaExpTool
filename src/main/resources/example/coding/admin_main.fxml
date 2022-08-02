@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="myStackPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coding.AdminMainController">
+   <children>
+      <BorderPane prefHeight="600" prefWidth="1000.0" styleClass="window-background" stylesheets="/css/styles.css">
+          <left>
+              <VBox alignment="TOP_CENTER" prefHeight="847.0" prefWidth="250.0" spacing="10.0" styleClass="nav-background" BorderPane.alignment="CENTER">
+                  <BorderPane.margin>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </BorderPane.margin>
+                  <children>
+                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="/Image/huc.jpg" />
+                          </image>
+                          <VBox.margin>
+                              <Insets top="20.0" />
+                          </VBox.margin>
+                      </ImageView>
+                      <Label fx:id="hucPane" styleClass="text-sub-heading" text="红客联盟HUC" />
+                      <Separator prefWidth="200.0" />
+                      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="250.0">
+                          <children>
+                              <Label alignment="TOP_LEFT" styleClass="text-sub-heading-light" text="JAVA漏洞系列">
+                                  <HBox.margin>
+                                      <Insets left="20.0" />
+                                  </HBox.margin>
+                              </Label>
+                          </children>
+                      </HBox>
+
+                      <JFXButton fx:id="navStruts2Button" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onStruts2Click" prefHeight="40.0" prefWidth="240.0" styleClass="nav-button-selected" text="struts2">
+                          <padding>
+                              <Insets left="30.0" />
+                          </padding>
+                      </JFXButton>
+                      <JFXButton fx:id="navAddADoctorBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onAddDoctorClick" prefHeight="40.0" prefWidth="240.0" styleClass="nav-button-unselected" text="shiro">
+                         <padding>
+                            <Insets left="30.0" />
+                         </padding>
+                      </JFXButton>
+                      <JFXButton fx:id="navPatientBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onPatientsClick" prefHeight="40.0" prefWidth="240.0" styleClass="nav-button-unselected" text="webLogic">
+                         <padding>
+                            <Insets left="30.0" />
+                         </padding>
+                      </JFXButton>
+                      <Separator prefWidth="200.0" />
+                      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="250.0">
+                         <children>
+                            <Label alignment="TOP_LEFT" styleClass="text-sub-heading-light" text="OA系统">
+                               <HBox.margin>
+                                  <Insets left="20.0" />
+                               </HBox.margin>
+                            </Label>
+                         </children>
+                      </HBox>
+                      <JFXButton fx:id="navSettingsBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onSettingsClick" prefHeight="47.0" prefWidth="240.0" styleClass="nav-button-unselected" text="通 达 OA">
+                         <padding>
+                            <Insets left="30.0" />
+                         </padding>
+                      </JFXButton>
+                      <JFXButton fx:id="navReportBug" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onReportBugClick" prefHeight="47.0" prefWidth="240.0" styleClass="nav-button-unselected" text="用 友 OA">
+                         <padding>
+                            <Insets left="30.0" />
+                         </padding>
+                      </JFXButton>
+                      <JFXButton fx:id="navSupportBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onSupportClick" prefHeight="47.0" prefWidth="240.0" styleClass="nav-button-unselected" text="蓝 凌 OA">
+                         <padding>
+                            <Insets left="30.0" />
+                         </padding>
+                      </JFXButton>
+                      <Separator prefWidth="200.0" />
+                      <JFXButton fx:id="navLogOutBtn" alignment="BASELINE_LEFT" graphicTextGap="20.0" onAction="#onLogOutClick" prefHeight="47.0" prefWidth="240.0" styleClass="nav-button-unselected" text="退出软件">
+                          <padding>
+                              <Insets left="30.0" />
+                          </padding>
+                      </JFXButton>
+                  </children>
+              </VBox>
+          </left>
+         <right>
+             <VBox alignment="TOP_CENTER" prefHeight="600" prefWidth="750.0"  spacing="10.0" styleClass="nav-background"   BorderPane.alignment="CENTER" >
+                 <BorderPane.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                 </BorderPane.margin>
+                 <AnchorPane fx:id="frameLayout"  styleClass="nav-background"  />
+             </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</StackPane>

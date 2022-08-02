@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="572.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coding.Struts2Controller">
+   <children>
+      <AnchorPane prefHeight="102.0" prefWidth="750.0" style="-fx-background-color: #f6f5ec; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="模式：" />
+            <ComboBox fx:id="modeValue" layoutX="54.0" layoutY="10.0" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="337.0" layoutY="8.0" prefHeight="30.0" prefWidth="76.0" text="漏洞编号：" />
+            <ComboBox fx:id="vulCode" layoutX="418.0" layoutY="10.0" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+
+             <Label alignment="CENTER" layoutX="9.0" layoutY="43.0" prefHeight="26.0" prefWidth="40.0" text="地址：">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addressValue" promptText="http://127.0.0.1:80/"  layoutX="54.0" layoutY="47.0" prefHeight="26.0" prefWidth="474.0" style="-fx-background-color: #fffffb; -fx-background-radius: 10;" />
+            <Button fx:id="vulnerCheckButton" layoutX="596.0" layoutY="45.0" mnemonicParsing="false" onAction="#exeButtonAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: -fx-color-blue; -fx-background-radius: 10;" text="漏洞验证" />
+            <Separator layoutY="84.0" prefHeight="18.0" prefWidth="750.0" />
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="mainPaneTab" layoutY="100.0" prefHeight="471.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #f2eada;" text="主页介绍">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="baseInfoText" layoutX="1.0" prefHeight="411.0" prefWidth="750.0" style="-fx-background-color: white;" text="## 模式&#10;1、靶场模式一般可用于靶场环境&amp;内网环境.&#10;2、实战模式自带部分waf绕过机制，用于外网环境.&#10;&#10;## 漏洞验证&#10;1、漏洞验证允许批量地址,地址与地址之间用逗号隔开. eg : http://www.a.com ,http://www.b.com&#10;2、漏洞验证的结果信息,&#10;&#10;## 命令执行&#10;1、只能针对单个漏洞进行命令执行.&#10;      也就是说，命令执行时，选取漏洞验证结果中存在漏洞的目标（执行命令前，配置好模式、漏洞编号、地址）.&#10;&#10;## 文件上传&#10;1、&#10;&#10;## 手工验证&#10;1、手工验证的数据格式是json &#10;2、可手工编辑自己的exp，尝试绕过waf&#10;&#10;## 0day验证&#10;1、根据规则编写java式exp类,通过反射方式实现." />
+                     </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="vulnerabilityCheckTabID" style="-fx-background-color: #f2eada;" text="漏洞验证">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TextArea fx:id="vulnerabilityCheckResulte" prefHeight="399.0" prefWidth="750.0" style="-fx-background-color: white;" />
+                    </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="cmdExecTabID" style="-fx-background-color: #f2eada;" text="命令执行">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutY="-1.0" prefHeight="38.0" prefWidth="750.0" style="-fx-background-color: #f2eada;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="83.0" prefHeight="42.0" prefWidth="53.0" text="命令：" />
+                              <TextField fx:id="exeCmdValue" layoutX="163.0" layoutY="8.0" prefHeight="26.0" prefWidth="331.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="8.0" />
+                              <Button fx:id="exeCmdButton" layoutX="606.0" layoutY="6.0" mnemonicParsing="false" onAction="#exeCmdAction" style="-fx-background-color: -fx-color-blue;" text="执  行" />
+                           </children>
+                        </AnchorPane>
+                        <TextArea fx:id="exeCmdTextAreaID" layoutY="41.0" prefHeight="373.0" prefWidth="750.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="uploadTabID" style="-fx-background-color: #f2eada;" text="文件上传">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="handCheckTabID" style="-fx-background-color: #f2eada;" text="手工验证">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="oneDayCheckTabID" style="-fx-background-color: #d1c7b7;" text="0day验证">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="306.0" prefWidth="750.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
